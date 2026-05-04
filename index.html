@@ -24,6 +24,42 @@ html, body {
     height: 60px;
 }
 
+.brand-title {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+    color: white;
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.9),
+        0 0 25px rgba(255,255,255,0.6),
+        0 0 55px rgba(255,255,255,0.4),
+        0 0 100px rgba(255,255,255,0.2);
+}
+
+.logo-wrap {
+    margin-bottom: 50px;
+    cursor: default;
+    transition: 0.3s ease;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.5)) drop-shadow(0 0 30px rgba(255,255,255,0.25));
+}
+
+.logo-wrap:hover {
+    filter:
+        drop-shadow(0 0 20px rgba(255,255,255,1))
+        drop-shadow(0 0 50px rgba(255,255,255,0.7))
+        drop-shadow(0 0 90px rgba(255,255,255,0.4));
+    transform: scale(1.06);
+}
+
+.logo-wrap img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+}
+
 /* TOP GRID */
 .grid-top {
     display: grid;
@@ -150,6 +186,14 @@ html, body {
 <body>
 
 <div class="wrapper">
+
+    <!-- TITLE -->
+    <div class="brand-title">UNDISTANT</div>
+
+    <!-- LOGO -->
+    <div class="logo-wrap">
+        <img src="help.png" alt="Undistant Logo" />
+    </div>
 
     <!-- TOP GRID -->
     <div class="grid-top">
