@@ -60,21 +60,18 @@ html, body {
     display: block;
 }
 
-/* TOP GRID */
 .grid-top {
     display: grid;
     grid-template-columns: repeat(3, 120px);
     gap: 35px;
 }
 
-/* BOTTOM GRID */
 .grid-bottom {
     display: grid;
     grid-template-columns: repeat(4, 140px);
     gap: 35px;
 }
 
-/* TOP BOXES */
 .box {
     height: 120px;
     width: 120px;
@@ -87,7 +84,6 @@ html, body {
     transition: 0.3s ease;
 }
 
-/* BEST SELLERS BOXES */
 .box-tall {
     height: 190px;
     width: 140px;
@@ -108,7 +104,6 @@ html, body {
         0 0 45px rgba(255,255,255,0.5);
 }
 
-/* divider */
 .divider {
     width: 60%;
     height: 2px;
@@ -121,7 +116,6 @@ html, body {
     opacity: 0.9;
 }
 
-/* BEST SELLERS TEXT */
 .section-title {
     font-size: 20px;
     font-weight: 300;
@@ -133,7 +127,6 @@ html, body {
         0 0 35px rgba(255,255,255,0.25);
 }
 
-/* SOCIAL */
 .social {
     display: flex;
     gap: 30px;
@@ -166,7 +159,6 @@ html, body {
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
 }
 
-/* copied message */
 .copied {
     position: fixed;
     bottom: 40px;
@@ -187,15 +179,12 @@ html, body {
 
 <div class="wrapper">
 
-    <!-- TITLE -->
     <div class="brand-title">UNDISTANT</div>
 
-    <!-- LOGO -->
     <div class="logo-wrap">
         <img src="help.png" alt="Undistant Logo" />
     </div>
 
-    <!-- TOP GRID -->
     <div class="grid-top">
         <div class="box"></div><div class="box"></div><div class="box"></div>
         <div class="box"></div><div class="box"></div><div class="box"></div>
@@ -203,55 +192,42 @@ html, body {
 
     <div class="divider"></div>
 
-    <!-- BEST SELLERS -->
     <div class="section-title">Best Sellers</div>
 
     <div class="space"></div>
 
-    <!-- BOTTOM GRID -->
     <div class="grid-bottom">
         <div class="box-tall"></div>
         <div class="box-tall"></div>
         <div class="box-tall"></div>
         <div class="box-tall"></div>
-
         <div class="box-tall"></div>
         <div class="box-tall"></div>
         <div class="box-tall"></div>
         <div class="box-tall"></div>
     </div>
 
-    <!-- SOCIAL MEDIA -->
     <div class="social">
-
-        <!-- Instagram -->
         <a href="https://www.instagram.com/undistants/" target="_blank">
             <svg viewBox="0 0 24 24" class="icon">
                 <path fill="white" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5z"/>
             </svg>
         </a>
-
-        <!-- TikTok -->
         <a href="https://www.tiktok.com/@undistant.brand" target="_blank">
             <svg viewBox="0 0 24 24" class="icon">
                 <path fill="white" d="M14 2h3a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.7V16a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V2z"/>
             </svg>
         </a>
-
-        <!-- X / Twitter -->
         <a href="https://x.com/undistants" target="_blank">
             <svg viewBox="0 0 24 24" class="icon">
                 <path fill="white" d="M22 5.8c-.7.3-1.4.5-2.2.6a3.8 3.8 0 0 0 1.7-2.1c-.7.4-1.6.8-2.5 1a3.8 3.8 0 0 0-6.5 3.5A10.8 10.8 0 0 1 3 4.7a3.8 3.8 0 0 0 1.2 5.1c-.6 0-1.2-.2-1.7-.5v.1a3.8 3.8 0 0 0 3 3.7c-.5.1-1 .2-1.5.1a3.8 3.8 0 0 0 3.6 2.6A7.6 7.6 0 0 1 2 18.6 10.8 10.8 0 0 0 7.9 20c7.1 0 11-5.9 11-11v-.5A7.7 7.7 0 0 0 22 5.8z"/>
             </svg>
         </a>
-
-        <!-- EMAIL COPY -->
         <a onclick="copyEmail()">
             <svg viewBox="0 0 24 24" class="icon">
                 <path fill="white" d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
         </a>
-
     </div>
 
 </div>
@@ -261,13 +237,9 @@ html, body {
 <script>
 function copyEmail() {
     navigator.clipboard.writeText("undistants@gmail.com");
-
     const msg = document.getElementById("copied");
     msg.style.opacity = "1";
-
-    setTimeout(() => {
-        msg.style.opacity = "0";
-    }, 1200);
+    setTimeout(() => { msg.style.opacity = "0"; }, 1200);
 }
 </script>
 
